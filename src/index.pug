@@ -1,0 +1,354 @@
+include pug/libs/_libs
+include pug/_head
+//- https://html2jade.org/
+//- https://rolling-scopes-school.github.io/akurlovich-JSFE2021Q1/online-zoo/pages/zoos_page/panda/index.html
+//- http://ankirs.indorteh.com/
+
+doctype html
+html(lang='ru-RU')
+
+  body.home.page-template-default.page
+    h1.visuallyhidden Title
+    h4.visuallyhidden Title
+    h5.visuallyhidden Title
+    h6.visuallyhidden Title
+    #page.site
+      header#masthead.header
+        .container
+          .header-top
+            .header-top__menu
+              nav.menu-main-menu-container
+                ul#main-menu.menu.lists
+                  li#menu-item-23.menu-item.menu-item-has-children.list
+                    a(href='#masthead') О компании
+                    +imageSvg('arrow')
+                    ul.sub-menu
+                      li#menu-item-177.menu-item.menu-item-type-post_type.list
+                        a(href='#masthead') Информация
+                      li#menu-item-176.menu-item.menu-item-type-post_type.list
+                        a(href='#masthead') Разработка
+                      li#menu-item-175.menu-item.menu-item-type-post.list
+                        a(href='#masthead') Портфолио
+                  li#menu-item-193.menu-item.list
+                    a(href='#masthead') Потребителям
+                  li#menu-item-26.menu-item.list
+                    a(href='#masthead') Магазины
+                  li#menu-item-25.menu-item.list
+                    a(href='#masthead') Контакты
+              .close
+                span
+                span
+            .header-top__link
+              ul.lists
+                li.list
+                  +imageSvg('mail')
+                  a.email.link(href='mailto:info@info.com') info@info.com
+                li.list
+                  span
+                    +imageSvg('mts')
+                    +imageSvg('a1')
+                  a.phone.link(href='tel:+375296461616') +375 (29) 646-16-16
+                li.list
+                  +imageSvg('phone')
+                  a.phone.link(href='tel:+375296461616') Обратный звонок
+                li.list
+                  +imageSvg('enter')
+                  a.enter.link(href='#masthead') Войти
+          .header-bottom
+            .wrapper-img
+              +imageSvg('logo')
+            .header-bottom__slang
+              span Разработка как спорт. Важен только результат.
+            #search.header-bottom__input
+              +imageSvg('plus')
+              input.header-bottom__input-control(type='text' name='search' value='' placeholder='Введите текст для поиска')
+              span.header-bottom__input-btn
+                button.btn(type='button')
+                  +imageSvg('close')
+            .header-bottom__btn-group
+              a.wishlist.btn-button(href='#masthead' title='Избранное')
+                +imageSvg('heart')
+                span.whishlist-title Избранное
+              #cart.btn-shopping-cart
+                a.btn-shopping-cart__link(href='#masthead')
+                  .shopcart
+                    +imageSvg('cart')
+                    span.total-shopping 3
+                  span.purchases-cart 20 888.50 р.
+              .burger_menu
+                span
+                span
+                span
+      main#primary.site-main
+        section.banner
+          .container
+            .swiper
+              .swiper-wrapper
+                .swiper-slide
+                  .wrapper-img.swiper-lazy(data-background=require('./images/banner1.png'))
+                    img(src=require('./images/banner1_0.png') alt="img")
+                    <div class="swiper-lazy-preloader"></div>
+                    .slide-info
+                      h2.title Слайдер первого экрана
+                    a(href='#')
+                .swiper-slide
+                  .wrapper-img.swiper-lazy(data-background=require('./images/banner2.jpg'))
+                    img(src=require('./images/banner1_0.png') alt="img")
+                    <div class="swiper-lazy-preloader"></div>
+                    .slide-info
+                      h2.title Слайдер второго экрана
+                    a(href='#')
+                .swiper-slide
+                  .wrapper-img.swiper-lazy(data-background=require('./images/banner3.jpg'))
+                    img(src=require('./images/banner1_0.png') alt="img")
+                    <div class="swiper-lazy-preloader"></div>
+                    .slide-info
+                      h2.title Слайдер третьего экрана
+                    a(href='#')
+                .swiper-slide
+                  .wrapper-img.swiper-lazy(data-background=require('./images/banner4.jpg'))
+                    img(src=require('./images/banner1_0.png') alt="img")
+                    <div class="swiper-lazy-preloader"></div>
+                    .slide-info
+                      h2.title Слайдер четвёртого экрана
+                    a(href='#')
+                .swiper-slide
+                  .wrapper-img.swiper-lazy(data-background=require('./images/banner5.jpg'))
+                    img(src=require('./images/banner1_0.png') alt="img")
+                    <div class="swiper-lazy-preloader"></div>
+                    .slide-info
+                      h2.title Слайдер пятого экрана
+                    a(href='#')
+                .swiper-slide
+                  .wrapper-img.swiper-lazy(data-background=require('./images/banner6.jpg'))
+                    img(src=require('./images/banner1_0.png') alt="img")
+                    <div class="swiper-lazy-preloader"></div>
+                    .slide-info
+                      h2.title Слайдер шестого экрана
+                    a(href='#')
+              .swiperPrev
+                img(src=require('./images/arrowslide.svg') alt="img")
+              .swiperNext
+                img(src=require('./images/arrowslide.svg') alt="img")
+        section.products
+          .container
+            .swiper-container
+              .swiper-carts
+                .swiper-wrapper
+                  .swiper-slide.cart
+                    .cart-image
+                      .cart-image__top
+                        .stickers
+                          span.action Акция -25%
+                          span.new Новинка
+                          span.recommend Рекомендуем
+                        .wishlist.path-off
+                          svg(width='24' height='21' viewBox='0 0 24 21' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(fill-rule='evenodd' clip-rule='evenodd' d='M7.12533 0.75C3.65059 0.75 0.916992 3.4836 0.916992 6.95833C0.916992 9.08225 1.82573 11.0216 3.4378 13.0368C5.04663 15.0479 7.37501 17.1579 10.2504 19.6242L10.2616 19.6344L10.4908 19.843C11.3469 20.6224 12.6547 20.6249 13.5138 19.8488L13.7393 19.645L13.7955 19.5939C16.5622 17.0798 18.8784 14.9749 20.5007 12.9864C22.1285 10.9911 23.0837 9.0825 23.0837 6.95833C23.0837 3.4836 20.3501 0.75 16.8753 0.75C15.6308 0.75 14.4206 1.11731 13.3899 1.75224C13.0932 1.93496 12.8112 2.13999 12.5473 2.36507C12.355 2.52911 12.1722 2.70384 12.0003 2.88839C11.8285 2.70384 11.6457 2.52911 11.4533 2.36507C11.1894 2.13999 10.9074 1.93496 10.6108 1.75224C9.58006 1.11731 8.36989 0.75 7.12533 0.75ZM2.41699 6.95833C2.41699 4.31202 4.47901 2.25 7.12533 2.25C8.07623 2.25 9.01602 2.53162 9.82407 3.02937C10.2889 3.31569 10.704 3.66992 11.0486 4.07459L12.0003 5.19217L12.952 4.07459C13.2966 3.66992 13.7118 3.31569 14.1766 3.02937C14.9846 2.53162 15.9244 2.25 16.8753 2.25C19.5216 2.25 21.5837 4.31202 21.5837 6.95833C21.5837 8.59111 20.8624 10.1701 19.3384 12.0382C17.8 13.9239 15.5759 15.9492 12.7733 18.4961L12.7326 18.533L12.5082 18.7357C12.2219 18.9944 11.7859 18.9936 11.5006 18.7338L11.2706 18.5245L11.2453 18.5014L11.2296 18.4879C8.34561 16.0143 6.11903 13.9873 4.60913 12.0998C3.11308 10.2296 2.41699 8.61372 2.41699 6.95833Z' fill='#894083')
+                            path.path-off-svg(xmlns='http://www.w3.org/2000/svg' d='M0.916992 6.95833C0.916992 3.4836 3.65059 0.75 7.12533 0.75C8.36989 0.75 9.58006 1.11731 10.6108 1.75224C10.9074 1.93496 11.1894 2.13999 11.4533 2.36507C11.6457 2.52911 11.8285 2.70384 12.0003 2.88839C12.1722 2.70384 12.355 2.52911 12.5473 2.36507C12.8112 2.13999 13.0932 1.93496 13.3899 1.75224C14.4206 1.11731 15.6308 0.75 16.8753 0.75C20.3501 0.75 23.0837 3.4836 23.0837 6.95833C23.0837 9.0825 22.1285 10.9911 20.5007 12.9864C18.8784 14.9749 16.5622 17.0798 13.7955 19.5939L13.7393 19.645L13.5138 19.8488C12.6547 20.6249 11.3469 20.6224 10.4908 19.843L10.2616 19.6344L10.2504 19.6242C7.37501 17.1579 5.04663 15.0479 3.4378 13.0368C1.82573 11.0216 0.916992 9.08225 0.916992 6.95833Z' fill='#894083')
+                      .wrapper-img
+                        img.swiper-lazy(src=require('./images/p-i-opacity.png') data-background=require('./images/p-i-1.png') alt='img')
+                        .swiper-lazy-preloader
+                        a(href='#masthead')
+                    .cart-caption
+                      .cart-caption__info
+                        h3.existence В наличии
+                        span.barcode Код: 4744481010818
+                      p.cart-caption__desc 
+                        | Консервы пастеризованные. Бульон куриный жидкий., 350мл 
+                        br
+                        | Консервы пастеризованные. Бульон
+                    .cart-info
+                      .cart-info__price
+                        p.cart-info__price-new 500.20 р.
+                        p.cart-info__price-old 600.20 р.
+                      button.btn-shopping-cart__link(href='#masthead')
+                        .shopcart
+                          +imageSvg('cart')
+                          span.total-shopping 3
+                    .cart-description
+                      .stepper
+                        span.stepper-step.down -
+                        input.stepper-input(type='number' value='200' min='1' max='500' name='count_okna')
+                        span.stepper-step.up +
+                      .cart-description__btns
+                        input.input-submit(type='submit' value='Купить в 1 клик')
+                        button.btn-cart В корзину
+                  .swiper-slide.cart
+                    .cart-image
+                      .cart-image__top
+                        .stickers
+                          span.action Акция -25%
+                          span.new Новинка
+                        .wishlist.path-off-all
+                          svg(width='24' height='21' viewBox='0 0 24 21' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(fill-rule='evenodd' clip-rule='evenodd' d='M7.12533 0.75C3.65059 0.75 0.916992 3.4836 0.916992 6.95833C0.916992 9.08225 1.82573 11.0216 3.4378 13.0368C5.04663 15.0479 7.37501 17.1579 10.2504 19.6242L10.2616 19.6344L10.4908 19.843C11.3469 20.6224 12.6547 20.6249 13.5138 19.8488L13.7393 19.645L13.7955 19.5939C16.5622 17.0798 18.8784 14.9749 20.5007 12.9864C22.1285 10.9911 23.0837 9.0825 23.0837 6.95833C23.0837 3.4836 20.3501 0.75 16.8753 0.75C15.6308 0.75 14.4206 1.11731 13.3899 1.75224C13.0932 1.93496 12.8112 2.13999 12.5473 2.36507C12.355 2.52911 12.1722 2.70384 12.0003 2.88839C11.8285 2.70384 11.6457 2.52911 11.4533 2.36507C11.1894 2.13999 10.9074 1.93496 10.6108 1.75224C9.58006 1.11731 8.36989 0.75 7.12533 0.75ZM2.41699 6.95833C2.41699 4.31202 4.47901 2.25 7.12533 2.25C8.07623 2.25 9.01602 2.53162 9.82407 3.02937C10.2889 3.31569 10.704 3.66992 11.0486 4.07459L12.0003 5.19217L12.952 4.07459C13.2966 3.66992 13.7118 3.31569 14.1766 3.02937C14.9846 2.53162 15.9244 2.25 16.8753 2.25C19.5216 2.25 21.5837 4.31202 21.5837 6.95833C21.5837 8.59111 20.8624 10.1701 19.3384 12.0382C17.8 13.9239 15.5759 15.9492 12.7733 18.4961L12.7326 18.533L12.5082 18.7357C12.2219 18.9944 11.7859 18.9936 11.5006 18.7338L11.2706 18.5245L11.2453 18.5014L11.2296 18.4879C8.34561 16.0143 6.11903 13.9873 4.60913 12.0998C3.11308 10.2296 2.41699 8.61372 2.41699 6.95833Z' fill='#894083')
+                            path.path-off-svg(xmlns='http://www.w3.org/2000/svg' d='M0.916992 6.95833C0.916992 3.4836 3.65059 0.75 7.12533 0.75C8.36989 0.75 9.58006 1.11731 10.6108 1.75224C10.9074 1.93496 11.1894 2.13999 11.4533 2.36507C11.6457 2.52911 11.8285 2.70384 12.0003 2.88839C12.1722 2.70384 12.355 2.52911 12.5473 2.36507C12.8112 2.13999 13.0932 1.93496 13.3899 1.75224C14.4206 1.11731 15.6308 0.75 16.8753 0.75C20.3501 0.75 23.0837 3.4836 23.0837 6.95833C23.0837 9.0825 22.1285 10.9911 20.5007 12.9864C18.8784 14.9749 16.5622 17.0798 13.7955 19.5939L13.7393 19.645L13.5138 19.8488C12.6547 20.6249 11.3469 20.6224 10.4908 19.843L10.2616 19.6344L10.2504 19.6242C7.37501 17.1579 5.04663 15.0479 3.4378 13.0368C1.82573 11.0216 0.916992 9.08225 0.916992 6.95833Z' fill='#894083')
+                      .wrapper-img
+                        img.swiper-lazy(src=require('./images/p-i-opacity.png') data-background=require('./images/p-i-2.png') alt='img')
+                        .swiper-lazy-preloader
+                        a(href='#masthead')
+                    .cart-caption
+                      .cart-caption__info
+                        h3.existence В наличии
+                        span.barcode Код: 4744481010818
+                      p.cart-caption__desc 
+                        | Консервы пастеризованные. Бульон куриный жидкий., 350мл 
+                        br
+                        | Консервы пастеризованные. Бульон
+                    .cart-info
+                      .cart-info__price
+                        p.cart-info__price-new 500.20 р.
+                        p.cart-info__price-old 600.20 р.
+                      button.btn-shopping-cart__link(href='#masthead')
+                        .shopcart
+                          +imageSvg('cart')
+                          span.total-shopping 3
+                    .cart-description
+                      .stepper
+                        span.stepper-step.down -
+                        input.stepper-input(type='number' value='200' min='1' max='500' name='count_okna')
+                        span.stepper-step.up +
+                      .cart-description__btns
+                        input.input-submit(type='submit' value='Купить в 1 клик')
+                        button.btn-cart В корзину
+                  .swiper-slide.cart
+                    .cart-image
+                      .cart-image__top
+                        .stickers
+                        .wishlist
+                          svg(width='24' height='21' viewBox='0 0 24 21' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(fill-rule='evenodd' clip-rule='evenodd' d='M7.12533 0.75C3.65059 0.75 0.916992 3.4836 0.916992 6.95833C0.916992 9.08225 1.82573 11.0216 3.4378 13.0368C5.04663 15.0479 7.37501 17.1579 10.2504 19.6242L10.2616 19.6344L10.4908 19.843C11.3469 20.6224 12.6547 20.6249 13.5138 19.8488L13.7393 19.645L13.7955 19.5939C16.5622 17.0798 18.8784 14.9749 20.5007 12.9864C22.1285 10.9911 23.0837 9.0825 23.0837 6.95833C23.0837 3.4836 20.3501 0.75 16.8753 0.75C15.6308 0.75 14.4206 1.11731 13.3899 1.75224C13.0932 1.93496 12.8112 2.13999 12.5473 2.36507C12.355 2.52911 12.1722 2.70384 12.0003 2.88839C11.8285 2.70384 11.6457 2.52911 11.4533 2.36507C11.1894 2.13999 10.9074 1.93496 10.6108 1.75224C9.58006 1.11731 8.36989 0.75 7.12533 0.75ZM2.41699 6.95833C2.41699 4.31202 4.47901 2.25 7.12533 2.25C8.07623 2.25 9.01602 2.53162 9.82407 3.02937C10.2889 3.31569 10.704 3.66992 11.0486 4.07459L12.0003 5.19217L12.952 4.07459C13.2966 3.66992 13.7118 3.31569 14.1766 3.02937C14.9846 2.53162 15.9244 2.25 16.8753 2.25C19.5216 2.25 21.5837 4.31202 21.5837 6.95833C21.5837 8.59111 20.8624 10.1701 19.3384 12.0382C17.8 13.9239 15.5759 15.9492 12.7733 18.4961L12.7326 18.533L12.5082 18.7357C12.2219 18.9944 11.7859 18.9936 11.5006 18.7338L11.2706 18.5245L11.2453 18.5014L11.2296 18.4879C8.34561 16.0143 6.11903 13.9873 4.60913 12.0998C3.11308 10.2296 2.41699 8.61372 2.41699 6.95833Z' fill='#894083')
+                            path.path-off-svg(xmlns='http://www.w3.org/2000/svg' d='M0.916992 6.95833C0.916992 3.4836 3.65059 0.75 7.12533 0.75C8.36989 0.75 9.58006 1.11731 10.6108 1.75224C10.9074 1.93496 11.1894 2.13999 11.4533 2.36507C11.6457 2.52911 11.8285 2.70384 12.0003 2.88839C12.1722 2.70384 12.355 2.52911 12.5473 2.36507C12.8112 2.13999 13.0932 1.93496 13.3899 1.75224C14.4206 1.11731 15.6308 0.75 16.8753 0.75C20.3501 0.75 23.0837 3.4836 23.0837 6.95833C23.0837 9.0825 22.1285 10.9911 20.5007 12.9864C18.8784 14.9749 16.5622 17.0798 13.7955 19.5939L13.7393 19.645L13.5138 19.8488C12.6547 20.6249 11.3469 20.6224 10.4908 19.843L10.2616 19.6344L10.2504 19.6242C7.37501 17.1579 5.04663 15.0479 3.4378 13.0368C1.82573 11.0216 0.916992 9.08225 0.916992 6.95833Z' fill='#894083')
+                      .wrapper-img
+                        img.swiper-lazy(src=require('./images/p-i-opacity.png') data-background=require('./images/p-i-3.png') alt='img')
+                        .swiper-lazy-preloader
+                        a(href='#masthead')
+                    .cart-caption
+                      .cart-caption__info
+                        h3.existence В наличии
+                        span.barcode Код: 4744481010818
+                      p.cart-caption__desc Морские водоросли Нори (плоские) обжаренные сушеные "Clearspring", 13.5г
+                    .cart-info
+                      .cart-info__price
+                        p.cart-info__price-new 8.98 р.
+                        p.cart-info__price-old
+                      button.btn-shopping-cart__link(href='#masthead')
+                    .cart-description
+                      .stepper
+                        span.stepper-step.down -
+                        input.stepper-input(type='number' value='200' min='1' max='500' name='count_okna')
+                        span.stepper-step.up +
+                      .cart-description__btns
+                        input.input-submit(type='submit' value='Купить в 1 клик')
+                        button.btn-cart В корзину
+                  .swiper-slide.cart
+                    .cart-image
+                      .cart-image__top
+                        .stickers
+                          span.action Акция -25%
+                        .wishlist.path-off
+                          svg(width='24' height='21' viewBox='0 0 24 21' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(fill-rule='evenodd' clip-rule='evenodd' d='M7.12533 0.75C3.65059 0.75 0.916992 3.4836 0.916992 6.95833C0.916992 9.08225 1.82573 11.0216 3.4378 13.0368C5.04663 15.0479 7.37501 17.1579 10.2504 19.6242L10.2616 19.6344L10.4908 19.843C11.3469 20.6224 12.6547 20.6249 13.5138 19.8488L13.7393 19.645L13.7955 19.5939C16.5622 17.0798 18.8784 14.9749 20.5007 12.9864C22.1285 10.9911 23.0837 9.0825 23.0837 6.95833C23.0837 3.4836 20.3501 0.75 16.8753 0.75C15.6308 0.75 14.4206 1.11731 13.3899 1.75224C13.0932 1.93496 12.8112 2.13999 12.5473 2.36507C12.355 2.52911 12.1722 2.70384 12.0003 2.88839C11.8285 2.70384 11.6457 2.52911 11.4533 2.36507C11.1894 2.13999 10.9074 1.93496 10.6108 1.75224C9.58006 1.11731 8.36989 0.75 7.12533 0.75ZM2.41699 6.95833C2.41699 4.31202 4.47901 2.25 7.12533 2.25C8.07623 2.25 9.01602 2.53162 9.82407 3.02937C10.2889 3.31569 10.704 3.66992 11.0486 4.07459L12.0003 5.19217L12.952 4.07459C13.2966 3.66992 13.7118 3.31569 14.1766 3.02937C14.9846 2.53162 15.9244 2.25 16.8753 2.25C19.5216 2.25 21.5837 4.31202 21.5837 6.95833C21.5837 8.59111 20.8624 10.1701 19.3384 12.0382C17.8 13.9239 15.5759 15.9492 12.7733 18.4961L12.7326 18.533L12.5082 18.7357C12.2219 18.9944 11.7859 18.9936 11.5006 18.7338L11.2706 18.5245L11.2453 18.5014L11.2296 18.4879C8.34561 16.0143 6.11903 13.9873 4.60913 12.0998C3.11308 10.2296 2.41699 8.61372 2.41699 6.95833Z' fill='#894083')
+                            path.path-off-svg(xmlns='http://www.w3.org/2000/svg' d='M0.916992 6.95833C0.916992 3.4836 3.65059 0.75 7.12533 0.75C8.36989 0.75 9.58006 1.11731 10.6108 1.75224C10.9074 1.93496 11.1894 2.13999 11.4533 2.36507C11.6457 2.52911 11.8285 2.70384 12.0003 2.88839C12.1722 2.70384 12.355 2.52911 12.5473 2.36507C12.8112 2.13999 13.0932 1.93496 13.3899 1.75224C14.4206 1.11731 15.6308 0.75 16.8753 0.75C20.3501 0.75 23.0837 3.4836 23.0837 6.95833C23.0837 9.0825 22.1285 10.9911 20.5007 12.9864C18.8784 14.9749 16.5622 17.0798 13.7955 19.5939L13.7393 19.645L13.5138 19.8488C12.6547 20.6249 11.3469 20.6224 10.4908 19.843L10.2616 19.6344L10.2504 19.6242C7.37501 17.1579 5.04663 15.0479 3.4378 13.0368C1.82573 11.0216 0.916992 9.08225 0.916992 6.95833Z' fill='#894083')
+                      .wrapper-img
+                        img.swiper-lazy(src=require('./images/p-i-opacity.png') data-background=require('./images/p-i-4.png') style='opacity: 0.5;' alt='img')
+                        .swiper-lazy-preloader
+                        a(href='#masthead')
+                    .cart-caption
+                      .cart-caption__info
+                        h3.existence(style='color: #C74A2C;') Отсутствует
+                        span.barcode Код: 4744481010818
+                      p.cart-caption__desc Рисовые хлебцы с молочным шоколадом, 34г
+                    .cart-info
+                      .cart-info__price
+                        p.cart-info__price-new 2.98 р.
+                        p.cart-info__price-old 4.00 р.
+                      button.btn-shopping-cart__link(href='#masthead')
+                        .shopcart
+                          +imageSvg('cart')
+                          span.total-shopping 3
+                    .cart-description
+                      .stepper
+                        span.stepper-step.down -
+                        input.stepper-input(type='number' value='200' min='1' max='500' name='count_okna')
+                        span.stepper-step.up +
+                      .cart-description__btns
+                        input.input-submit(type='submit' value='Купить в 1 клик')
+                        button.btn-cart В корзину
+                  .swiper-slide.cart
+                    .cart-image
+                      .cart-image__top
+                        .stickers
+                          span.action Акция -25%
+                          span.new Новинка
+                          span.recommend Рекомендуем
+                        .wishlist.path-off
+                          svg(width='24' height='21' viewBox='0 0 24 21' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(fill-rule='evenodd' clip-rule='evenodd' d='M7.12533 0.75C3.65059 0.75 0.916992 3.4836 0.916992 6.95833C0.916992 9.08225 1.82573 11.0216 3.4378 13.0368C5.04663 15.0479 7.37501 17.1579 10.2504 19.6242L10.2616 19.6344L10.4908 19.843C11.3469 20.6224 12.6547 20.6249 13.5138 19.8488L13.7393 19.645L13.7955 19.5939C16.5622 17.0798 18.8784 14.9749 20.5007 12.9864C22.1285 10.9911 23.0837 9.0825 23.0837 6.95833C23.0837 3.4836 20.3501 0.75 16.8753 0.75C15.6308 0.75 14.4206 1.11731 13.3899 1.75224C13.0932 1.93496 12.8112 2.13999 12.5473 2.36507C12.355 2.52911 12.1722 2.70384 12.0003 2.88839C11.8285 2.70384 11.6457 2.52911 11.4533 2.36507C11.1894 2.13999 10.9074 1.93496 10.6108 1.75224C9.58006 1.11731 8.36989 0.75 7.12533 0.75ZM2.41699 6.95833C2.41699 4.31202 4.47901 2.25 7.12533 2.25C8.07623 2.25 9.01602 2.53162 9.82407 3.02937C10.2889 3.31569 10.704 3.66992 11.0486 4.07459L12.0003 5.19217L12.952 4.07459C13.2966 3.66992 13.7118 3.31569 14.1766 3.02937C14.9846 2.53162 15.9244 2.25 16.8753 2.25C19.5216 2.25 21.5837 4.31202 21.5837 6.95833C21.5837 8.59111 20.8624 10.1701 19.3384 12.0382C17.8 13.9239 15.5759 15.9492 12.7733 18.4961L12.7326 18.533L12.5082 18.7357C12.2219 18.9944 11.7859 18.9936 11.5006 18.7338L11.2706 18.5245L11.2453 18.5014L11.2296 18.4879C8.34561 16.0143 6.11903 13.9873 4.60913 12.0998C3.11308 10.2296 2.41699 8.61372 2.41699 6.95833Z' fill='#894083')
+                            path.path-off-svg(xmlns='http://www.w3.org/2000/svg' d='M0.916992 6.95833C0.916992 3.4836 3.65059 0.75 7.12533 0.75C8.36989 0.75 9.58006 1.11731 10.6108 1.75224C10.9074 1.93496 11.1894 2.13999 11.4533 2.36507C11.6457 2.52911 11.8285 2.70384 12.0003 2.88839C12.1722 2.70384 12.355 2.52911 12.5473 2.36507C12.8112 2.13999 13.0932 1.93496 13.3899 1.75224C14.4206 1.11731 15.6308 0.75 16.8753 0.75C20.3501 0.75 23.0837 3.4836 23.0837 6.95833C23.0837 9.0825 22.1285 10.9911 20.5007 12.9864C18.8784 14.9749 16.5622 17.0798 13.7955 19.5939L13.7393 19.645L13.5138 19.8488C12.6547 20.6249 11.3469 20.6224 10.4908 19.843L10.2616 19.6344L10.2504 19.6242C7.37501 17.1579 5.04663 15.0479 3.4378 13.0368C1.82573 11.0216 0.916992 9.08225 0.916992 6.95833Z' fill='#894083')
+                      .wrapper-img
+                        img.swiper-lazy(src=require('./images/p-i-opacity.png') data-background=require('./images/p-i-1.png') alt='img')
+                        .swiper-lazy-preloader
+                        a(href='#masthead')
+                    .cart-caption
+                      .cart-caption__info
+                        h3.existence В наличии
+                        span.barcode Код: 4744481010818
+                      p.cart-caption__desc 
+                        | Консервы пастеризованные. Бульон куриный жидкий., 350мл 
+                        br
+                        | Консервы пастеризованные. Бульон
+                    .cart-info
+                      .cart-info__price
+                        p.cart-info__price-new 500.20 р.
+                        p.cart-info__price-old 600.20 р.
+                      button.btn-shopping-cart__link(href='#masthead')
+                        .shopcart
+                          +imageSvg('cart')
+                          span.total-shopping 3
+                    .cart-description
+                      .stepper
+                        span.stepper-step.down -
+                        input.stepper-input(type='number' value='200' min='1' max='500' name='count_okna')
+                        span.stepper-step.up +
+                      .cart-description__btns
+                        input.input-submit(type='submit' value='Купить в 1 клик')
+                        button.btn-cart В корзину
+                .swiper-pagination
+                .swiperPrevCart
+                  img(src=require('./images/arrowslideprod.svg') alt="img")
+                .swiperNextCart
+                  img(src=require('./images/arrowslideprod.svg') alt="img")
+        section.form-style
+          .container
+            .form 
+              h2.title Form style 
+              .wrap-inputs 
+                .wrap-inputs__radio
+                  label.label.label1
+                    span.wpcf7-form-control.wpcf7-checkbox
+                      span.wpcf7-list-item.first.last
+                        input.radio1(type='radio' name='cart' value='1')
+                        span.wpcf7-list-item-label В корзину
+                    span.ch__img
+                  label.label.label2
+                    span.wpcf7-form-control.wpcf7-checkbox
+                      span.wpcf7-list-item.first.last
+                        input.radio2(type='radio'  name='cart' value='2' checked)
+                        span.wpcf7-list-item-label В корзину
+                    span.ch__img
+                .wrap-inputs__checkbox
+                  label.label.label3
+                    span.wpcf7-form-control.wpcf7-checkbox
+                      span.wpcf7-list-item.first.last
+                        input#inline.checkbox3(type='checkbox' name='call-me[]' value='В корзину')
+                        span.wpcf7-list-item-label В корзину
+                    span.ch__img
+                  label.label.label4
+                    span.wpcf7-form-control.wpcf7-checkbox
+                      span.wpcf7-list-item.first.last
+                        input.checkbox4(type='checkbox' name='call-me[]' value='В корзину')
+                        span.wpcf7-list-item-label В корзину
+                    span.ch__img
+      footer.footer
